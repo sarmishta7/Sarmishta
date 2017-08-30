@@ -1,0 +1,146 @@
+/*!
+ * mutaurwa-2
+ *
+ * MIT licensed
+ * Copyright (C) 2013 Tim Holman, http://tholman.com
+ */
+/*********************************************
+ *  FONT
+ *********************************************/
+/* @font-face {
+  font-family: 'helvetica';
+  src: url("fonts/icomoon.eot");
+  src: url("fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf") format("truetype"), url("fonts/icomoon.woff") format("woff"), url("fonts/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; } */
+
+@font-face {
+font-family: 'Amarante', cursive;
+/*  src: url("fonts/icomoon.eot");
+  src: url("fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf") format("truetype"), url("fonts/icomoon.woff") format("woff"), url("fonts/icomoon.svg#icomoon") format("svg"); */
+  
+  font-weight: normal;
+  font-style: normal; }
+  
+[class*="icon-"] {
+  font-family: 'Amarante';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-play:before {
+  content: "\e600"; }
+
+.icon {
+  font-family: 'Amarante'; }
+
+/*********************************************
+ *  MIXINS + VARS
+ *********************************************/
+/*********************************************
+ *
+ *********************************************/
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  background-image: url('bg.jpg');
+  border: 5px solid #222222;
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  min-width: 500px;
+  min-height: 460px; }
+
+h1 {
+  font-family: 'Amarante', cursive;
+  font-weight: bold;
+  text-align: center;
+  font-size: 200px;
+  margin-top: 0px;
+  margin-bottom: 25px;
+  /* color: #77B3BD;  307E9E*/
+  color: #82B7BD;
+  line-height: 220px;
+  height: 220px; }
+  h1 span {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    line-height: 210px;
+    height: 220px;
+    overflow: hidden; }
+    h1 span:hover .scanner {
+      width: 100%;
+      background-color: red; }
+  h1 .scan {
+    pointer-events: none;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 5px;
+    padding-right: 5px;
+    bottom: 0px; }
+  h1 .scanner {
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    width: 0%;
+    height: 100%;
+    background: #222222;
+    position: relative;
+    left: 0px;
+    top: 0px; }
+
+.play {
+  text-align: center; }
+
+.icon {
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+  font-size: 40px;
+  display: block;
+  color: #222222;
+  height: 41px;
+  width: 41px;
+  margin: auto; }
+  .icon:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+    color: red; }
+
+audio {
+  display: none; }
+
+@media only screen and (max-width: 800px) {
+  h1 {
+    height: 170px !important;
+    font-size: 200px !important; }
+    h1 span {
+      line-height: 170px !important;
+      height: 170px !important; } }
+@media only screen and (max-width: 580px) {
+  h1 {
+    height: 140px !important;
+    font-size: 150px !important; }
+    h1 span {
+      line-height: 140px !important;
+      height: 140px !important; } }
